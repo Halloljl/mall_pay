@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hallo.mall.mapper.OrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.hallo.mall.pojo.Order">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="orderNo" column="order_no" jdbcType="BIGINT"/>
+            <result property="userId" column="user_id" jdbcType="INTEGER"/>
+            <result property="shippingId" column="shipping_id" jdbcType="INTEGER"/>
+            <result property="payment" column="payment" jdbcType="DECIMAL"/>
+            <result property="paymentType" column="payment_type" jdbcType="INTEGER"/>
+            <result property="postage" column="postage" jdbcType="INTEGER"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="paymentTime" column="payment_time" jdbcType="TIMESTAMP"/>
+            <result property="sendTime" column="send_time" jdbcType="TIMESTAMP"/>
+            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+            <result property="closeTime" column="close_time" jdbcType="TIMESTAMP"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,order_no,user_id,
+        shipping_id,payment,payment_type,
+        postage,status,payment_time,
+        send_time,end_time,close_time,
+        create_time,update_time
+    </sql>
+</mapper>
